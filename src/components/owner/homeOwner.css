@@ -1,0 +1,12 @@
+.sidebar{
+    color: white;
+}
+.logo{
+    display: flex;
+}
+.sport{
+    padding-top: 11%;
+}
+*{
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
