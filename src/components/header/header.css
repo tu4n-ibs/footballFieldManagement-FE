@@ -1,17 +1,42 @@
-.img-header{
-    height: 70px;
-}
-.text-header{
-    text-decoration: none;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-size: 110%;
-    cursor: pointer;
-    color: black;
-}
-.flex{
+
+.header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 }
-.menu{
-    margin-top: 20px;
-    padding-left: 10rem;
+
+.menu {
+    /* display: flex; */
+    flex-wrap: wrap;
+    padding-right: 0px;
+}
+
+.text-header {
+    margin: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Ẩn menu trên màn hình nhỏ */
+    }
+    .menu-icon {
+        display: block; /* Hiển thị biểu tượng menu */
+    }
+}
+.menu {
+    display: none; /* Ẩn menu mặc định */
+}
+
+.menu.flex {
+    display: flex; /* Hiện menu khi có class flex */
+}
+
+@media (min-width: 768px) {
+    .menu {
+        display: flex !important;
+    }
+}
+.menu {
+    transition: all 0.3s ease; /* Thêm hiệu ứng chuyển tiếp */
 }

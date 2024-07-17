@@ -1,13 +1,12 @@
-import "../../components/header/header"
-import "../../components/aboutweb/content"
 import Header from "../../components/header/header";
-import "../../components/home/home.css"
 import Content from "../../components/aboutweb/content";
+import "../../components/home/home.css";
+
 export default function Home() {
     return (
         <>
-        <Header/>
-        <Content/>
+            <Header />
+            <Content />
         </>
     );
 }
