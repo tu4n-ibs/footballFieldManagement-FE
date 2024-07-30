@@ -69,14 +69,15 @@ export default function Football() {
         getTime();
     }, [])
 
-    const handleTimeChange = (id) => {
-        setSelectedTime((prevSelectedTimes) => {
-            if (prevSelectedTimes.includes(id)) {
-                return prevSelectedTimes.filter(timeId => timeId !== id);
-            } else {
-                return [...prevSelectedTimes, id];
-            }
-        });
+    const handleTimeChange = (typeFields) => {
+        // setSelectedTime((prevSelectedTimes) => {
+        //     if (prevSelectedTimes.includes(id)) {
+        //         return prevSelectedTimes.filter(timeId => timeId !== id);
+        //     } else {
+        //         return [...prevSelectedTimes, id];
+        //     }
+        // });
+        setSelectedTime([typeFields]);
     };
     const [owner, setOwner] = useState([]);
     const [totalPrice, setTotalPrice] = useState('');
@@ -113,7 +114,7 @@ export default function Football() {
     const handleClick = (fieldId) => {
         getFields(fieldId);
     };
-
+console.log(selectedTime);
     const rentFields = async () => {
         const data = {
             bookingTimes: selectedTime,
@@ -247,7 +248,7 @@ export default function Football() {
                                                                                 name="timeSlot"
                                                                                 id={`flexCheckDefault${timeSlot.id}`}
                                                                                 value={timeSlot.timeFields}
-                                                                                onChange={() => handleTimeChange(timeSlot.id)}
+                                                                                onChange={() => handleTimeChange(timeSlot.timeFields)}
                                                                             />
                                                                             <label className="form-check-label" htmlFor={`flexCheckDefault${timeSlot.id}`}>
                                                                                 {timeSlot.time}
