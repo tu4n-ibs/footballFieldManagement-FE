@@ -211,7 +211,7 @@ console.log(selectedTime);
                                             <Button className="mt-2 ms-2 btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal1" onClick={() => handleClick(item.id)}>
                                                 Xem Sân
                                             </Button>
-                                            <div className="modal fade" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style={{ marginTop: '3.5rem' }}>
+                                            <div className="modal fade" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div className="modal-dialog">
                                                     <div className="modal-content">
                                                         <div className="modal-header">
@@ -229,7 +229,7 @@ console.log(selectedTime);
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style={{ marginTop: '3.5rem' }}>
+                                            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div className="modal-dialog">
                                                     <div className="modal-content">
                                                         <div className="modal-header">
