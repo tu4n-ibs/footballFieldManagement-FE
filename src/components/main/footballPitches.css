@@ -1,11 +1,8 @@
-.container {
-    float: right;
-}
-
 .w {
     width: 615px;
 }
-.pd-45{
+
+.pd-45 {
     padding-right: 45px;
 }
 
@@ -61,3 +58,72 @@ label.star:before {
     content: '\f006';
     font-family: FontAwesome;
 }
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.pd-45 {
+    padding: 0.45rem !important;
+}
+
+/* footballPitches.css */
+
+/* Điều chỉnh chiều rộng của sidebar */
+.sidebar {
+    flex: 0 0 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    /* padding-top: 20px; */
+}
+
+.container-fluid {
+    flex: 1;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.row-cols-1.row-cols-md-3 .col {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    /* width: 100%; */
+    margin-top: 0.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .d-flex {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .container-fluid {
+        width: 100%;
+    }
+}
+  

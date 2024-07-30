@@ -1,12 +1,43 @@
-.sidebar{
-    color: white;
-}
-.logo{
+.drawer-content {
     display: flex;
+    flex-direction: column;
+    height: 100%;
 }
-.sport{
-    padding-top: 11%;
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
 }
-*{
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+
+.img-header {
+    width: 40px;
+    height: 40px;
 }
+
+.sport {
+    margin-left: 1rem;
+}
+
+.logout-container {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Tạo khoảng cách giữa các mục menu */
+.drawer-content .MuiListItem-root {
+    margin-bottom: 1rem;
+}
+
+/* Đảm bảo rằng sidebar hiển thị đúng trên các thiết bị di động */
+@media (max-width: 760px) {
+    .MuiDrawer-paper {
+        width: 100%;
+    }
+
+    .drawer-content .MuiListItem-root {
+        margin-bottom: 0.5rem;
+    }
+}
+
+

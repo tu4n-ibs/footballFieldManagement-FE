@@ -12,6 +12,7 @@ import HomeOwner from './components/owner/homeOwner';
 import ManageFileds from './components/owner/manageFileds';
 import Football from './components/detail/football';
 import InforManage from './components/inforManageFields/InforManage';
+import HistoryUser from './components/history/history';
 function App() {
   return (
     <>
@@ -28,6 +29,7 @@ function App() {
       <Route path='/quan-ly-san-bong' element={<ManageFileds/>}></Route>
       <Route path='/:id/detail-football' element={<Football/>}></Route>
       <Route path='/thong-tin' element={<InforManage/>}></Route>
+      <Route path='/lich-su' element={<HistoryUser/>}></Route>
     </Routes>
     </>
   );

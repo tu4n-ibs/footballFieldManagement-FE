@@ -7,3 +7,15 @@
 .infor{
     display: flex;
 }
+.v{
+    margin-left: 2%;
+}
+@media (max-width: 768px) {
+    .v{
+        margin-left: 0%;
+        margin-top: 1%;
+    }
+    .img{
+        width: 100%;
+    }
+}
