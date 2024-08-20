@@ -72,9 +72,8 @@ export default function Sidebar() {
         <div className='drawer-content'>
             <div className='logo'>
                 <Link to={'/'}>
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM_3TfYToHgKq8riyh-_jv5n8LPbGiyIRIJg&s' className='img-header ms-1' />
+                    <img src='https://www.sporta.vn/assets/logo_cam-704c8f886d8a8fe0ac8c33efadb66891118c0d429807d16607589868a5482d1d.svg' className='img-header ms-1' />
                 </Link>
-                <h6 className='sport'>Bóng Đá Plus</h6>
             </div>
             <Divider />
             <List>
@@ -158,7 +157,7 @@ export default function Sidebar() {
                         open={isMobile ? mobileOpen : true}
                         onClose={handleDrawerToggle}
                         ModalProps={{
-                            keepMounted: true // Better open performance on mobile.
+                            keepMounted: true
                         }}
                         sx={{
                             display: { xs: 'block', sm: 'block' },

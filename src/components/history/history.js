@@ -12,11 +12,17 @@ export default function HistoryUser() {
         { id: 5, nane: 'san bong thanh do5', price: '500.000', type: '7', time: '19:00:00' }
     ]
     const user = JSON.parse(localStorage.getItem("currentUser"));
+    const [showErr, setShowErr] = useState(false);
     const [booking, setBooking] = useState([]);
     useEffect(() => {
         const getBookingUser = async () => {
             const response = await axios.get(`http://localhost:8080/users/${user.data.id}/getBooking`);
             setBooking(response.data);
+            if (response.data === null) {
+                setShowErr(true);
+            } else {
+                setShowErr(false);
+            }
         }
         getBookingUser();
     }, [])
@@ -48,13 +54,14 @@ export default function HistoryUser() {
                                     return (
                                         <tr>
                                             <th scope="row">{item.id}</th>
-                                            <td>{item.nane}</td>
-                                            <td>{item.price} đ</td>
-                                            <td>Sân {item.type}</td>
-                                            <td>{item.time}</td>
+                                            <td>{item.footballFields.name}</td>
+                                            <td>{item.totalPrice} đ</td>
+                                            <td>Sân {item.footballFields.typeFields}</td>
+                                            <td>{item.bookingTime}</td>
                                         </tr>
                                     )
                                 }))}
+                                {showErr && <p>no content</p>}
                             </tbody>
                         </table>
                     </div>
